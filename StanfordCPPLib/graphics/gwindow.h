@@ -367,7 +367,6 @@ public:
     void fillOval(const GRectangle& bounds);
     void fillOval(double x, double y, double width, double height);
 
-
     /*
      * Method: fillPolygon
      * Usage: gw.fillPolygon(x1, y1, x2, y2, ..., xN, yN);
@@ -529,8 +528,6 @@ public:
      * Returns the width of the graphics window in pixels.
      */
     double getWidth() const;
-
-    std::string getWindowData() const;   // not to be called by students
 
     /*
      * Method: getWindowTitle
@@ -819,6 +816,9 @@ public:
     void setRegionAlignment(const std::string& region, const std::string& align);
 
     /*
+     * Method: setRepaintImmediately
+     * Usage: gw.setRepaintImmediately(false);
+     * ---------------------------------------
      * Sets whether the GWindow should repaint after every draw operation.
      * Initially true.
      * If set to false, you must manually repaint when you want the GWindow
@@ -937,6 +937,7 @@ public:
 
     explicit GWindow(bool visible);
     GWindow(GWindowData* gwd);
+    std::string getWindowData() const;
     GWindowData* getWindowDataPointer() const;
 
 private:

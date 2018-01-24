@@ -50,7 +50,8 @@ std::string boolToString(int b);
 /*
  * Returns an integer equivalent of the given numeric character.
  * For example, charToInteger('3') returns the int 3.
- * If the character is not '0' through '9', throws an error.
+ * If the character is not '0' through '9', charToInteger
+ * throws an error.
  */
 int charToInteger(char c);
 
@@ -121,7 +122,7 @@ std::string htmlEncode(const std::string& s);
  * For example, calling <code>integerToChar(3)</code> returns
  * the char <code>'3'</code>.
  * If the given integer is not a single-digit number from 0-9 inclusive,
- * throws an error.
+ * integerToChar throws an error.
  */
 char integerToChar(int n);
 

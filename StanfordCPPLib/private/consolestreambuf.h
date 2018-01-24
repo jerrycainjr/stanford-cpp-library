@@ -47,7 +47,7 @@ public:
     }
 
     virtual int overflow(int ch = EOF) {
-        return overflow(ch, /* isStderr */ false);
+        return overflow(ch, /* isStderr = */ false);
     }
 
     virtual int overflow(int ch, bool isStderr) {
