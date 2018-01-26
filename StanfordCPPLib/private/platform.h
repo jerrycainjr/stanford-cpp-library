@@ -63,7 +63,6 @@
 #include "gevents.h"
 #include "gwindow.h"
 #include "point.h"
-#include "sound.h"
 
 namespace stanfordcpplib {
 class Platform {
@@ -368,14 +367,10 @@ public:
     std::string regex_replace(const std::string& s, const std::string& regexp, const std::string& replacement, int limit = -1);
 
     void setStackSize(unsigned int stackSize);
-
-    void sound_constructor(Sound* sound, const std::string& filename);
-    void sound_delete(Sound* sound);
-    void sound_play(Sound* sound);
-
+    
     int url_download(const std::string& url, const std::string& filename);
 };
-
+ 
 /* free function to get a reference to the singleton Platform instance */
 Platform* getPlatform();
 
